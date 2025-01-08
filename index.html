@@ -7,12 +7,59 @@
 </head>
 <body>
     <script>
+        /* array version
         function GetComputerChoice(){
-           const options = ['rock', 'paper', 'scissors'];
+           const options = ["rock", "paper", "scissors"];
            const randomOption = Math.floor(Math.random() * options.length);
             return options[randomOption];
         }
-        console.log(GetComputerChoice());
+         console.log(GetComputerChoice());
+*/      getHumanChoice();
+        function getComputerChoice(){
+            randomOption = Math.floor(Math.random() * 3);
+            switch(randomOption){
+                case 0:
+                    return 'rock';
+                case 1:
+                    return 'paper';
+
+                case 2:
+                    return 'scissors';
+            }
+        }
+            console.log(getComputerChoice());
+
+
+            function getHumanChoice(){   
+                 let userInput = prompt("Enter rock paper or scissors"); 
+                if(userInput.toLowerCase() === 'rock'){
+                    console.log('You entered rock')
+                } else if (userInput.toLowerCase() === 'paper'){
+                    console.log('You entered paper')
+                } else if (userInput.toLowerCase() === 'scissors'){
+                    console.log('You entered scissors')
+                } else {
+                    console.log('${userInput} is an invalid Input')
+                }
+            }
+
+            let humanScore = 0;
+            let ComputerScore = 0;
+            let roundWinner = '';
+            const computerChoice = getComputerChoice();
+            const playerChoice = getHumanChoice();
+
+            function playRound(computerChoice, playerChoice){
+                if(playerChoice === computerChoice){
+                    roundWinner = 'tie'
+                }
+                if (
+                    (playerChoice === 'rock' && computerChoice === 'scissors') ||
+                    (playerChoice === 'paper' && computerChoice === 'rock') ||
+                    (playerChoice === 'scissors' && computerChoice === 'paper')
+                )
+                }
+            
     </script>
 </body>
 </html>
