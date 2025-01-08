@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-paper</title>
+</head>
+<body>
+    <script>
+        function GetComputerChoice(){
+           const options = ['rock', 'paper', 'scissors'];
+           const randomOption = Math.floor(Math.random() * options.length);
+            return options[randomOption];
+        }
+        console.log(GetComputerChoice());
+    </script>
+</body>
+</html>
