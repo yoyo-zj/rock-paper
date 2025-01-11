@@ -9,12 +9,30 @@
     <script>
         /* array version
         function GetComputerChoice(){
-           const options = ["rock", "paper", "scissors"];
+         const options = ["rock", "paper", "scissors"]; 
            const randomOption = Math.floor(Math.random() * options.length);
             return options[randomOption];
         }
          console.log(GetComputerChoice());
-*/      getHumanChoice();
+*/  
+    
+           
+       
+        
+            
+           
+                
+        
+        
+        function playGame(){
+        let playerScore = 0;
+        let computerScore = 0;
+        let roundWinner = ''; 
+        for(let i =0; i< 5; i++){ 
+            
+        const computerSelection = getComputerChoice();
+        const playerSelection = getHumanChoice();
+        
         function getComputerChoice(){
             randomOption = Math.floor(Math.random() * 3);
             switch(randomOption){
@@ -25,41 +43,78 @@
 
                 case 2:
                     return 'scissors';
+ 
             }
         }
-            console.log(getComputerChoice());
 
 
+       
             function getHumanChoice(){   
-                 let userInput = prompt("Enter rock paper or scissors"); 
-                if(userInput.toLowerCase() === 'rock'){
-                    console.log('You entered rock')
-                } else if (userInput.toLowerCase() === 'paper'){
-                    console.log('You entered paper')
-                } else if (userInput.toLowerCase() === 'scissors'){
-                    console.log('You entered scissors')
-                } else {
-                    console.log('${userInput} is an invalid Input')
-                }
+                 let userInput = prompt("Enter rock paper or scissors").toLowerCase();
+                return userInput;
+              
             }
 
-            let humanScore = 0;
-            let ComputerScore = 0;
-            let roundWinner = '';
-            const computerChoice = getComputerChoice();
-            const playerChoice = getHumanChoice();
 
-            function playRound(computerChoice, playerChoice){
-                if(playerChoice === computerChoice){
-                    roundWinner = 'tie'
-                }
-                if (
-                    (playerChoice === 'rock' && computerChoice === 'scissors') ||
-                    (playerChoice === 'paper' && computerChoice === 'rock') ||
-                    (playerChoice === 'scissors' && computerChoice === 'paper')
-                )
-                }
             
-    </script>
+        function playRound(computerChoice, playerChoice){
+                    
+                    if(playerSelection === computerSelection){
+                        roundWinner = 'tie'
+                        console.log('its a tie')
+                    } 
+                    if (
+                        playerSelection === 'rock' && computerSelection === 'scissors' ||
+                        playerSelection === 'paper' && computerSelection === 'rock' ||
+                        playerSelection === 'scissors' && computerSelection === 'paper'
+                    ){
+                        playerScore++
+                        roundWinner = 'player'
+                        console.log(`${playerSelection} beats ${computerSelection} 
+                        You now have ${playerScore} point`)
+                      
+                    }
+
+                    if (
+                        computerSelection === 'rock' && playerSelection === 'scissors' ||
+                        computerSelection === 'paper' && playerSelection === 'rock' ||
+                        computerSelection === 'scissors' && playerSelection === 'paper'
+                    ){
+                        computerScore++
+                        roundWinner = 'computer'
+                        console.log(`${computerSelection} beats ${playerSelection} 
+                        The computer now has 1 point`)
+                      
+                    }
+                    
+                }
+                    
+
+            playRound(computerSelection, playerSelection)
+                    console.log(`Computer selected ${computerSelection}`);
+                    console.log(`Player selected ${playerSelection}`);
+               
+        } 
+        if(playerScore > computerScore){
+            console.log(`You won the war with${playerScore} points
+            computer had ${computerScore}points`)
+        } else if( computerScore > playerScore){
+            console.log(`You lost the battle with ${playerScore} points 
+            the computer had ${computerScore}` )
+        }else if(playerScore == computerScore){
+            console.log('Its a draw')
+        }   
+        }
+    
+        playGame();   
+        
+ 
+
+          
+          
+           
+        
+            
+    </script> 
 </body>
 </html>
