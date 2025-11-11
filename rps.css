@@ -1,0 +1,209 @@
+@font-face {
+    font-family: Boldos;
+    src: url("rpsFonts/Boldonse/Boldonse-Regular.ttf");
+}
+@font-face {
+    font-family: Roboto;
+    src: url("rpsFonts/Roboto/Roboto-Italic-VariableFont_wdth\,wght.ttf");
+}
+@font-face {
+    font-family: Varela;
+    src: url("rpsFonts/Varela_Round/VarelaRound-Regular.ttf");
+}
+
+@font-face {
+    font-family: Comfortaa;
+    src: url("rpsFonts/Comfortaa/Comfortaa-VariableFont_wght.ttf");
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Comfortaa", "Roboto";
+
+
+
+   /* border: red solid 2px; */
+}
+.start-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100vh;
+    padding: 250px;
+    display: hidden;
+
+}
+
+.start-button:hover{
+    background-color: rgb(253, 168, 45);
+    color: white;
+}
+.start-button {
+    border: #162b48 solid 2px;
+    border-bottom: #162b48 solid 8px;
+    color: #162b48;
+    font-size: 24px;
+    border-radius: 10px;
+    font-family: "Comfortaa";
+    font-weight: 800;
+    padding: 10px 24px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffcf4a;
+    
+}
+
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 48px;
+    background-color: #ffcf4a;
+    flex-flow: row wrap;
+    
+}
+
+.logo{
+    color: white;
+    font-size: 24px;
+    font-family: "Boldos";
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-shadow: 4px 2px rgb(31,25,64), -2px -2px rgb(250,170,50);
+    background-color: rgb(250,170,50);
+    padding: 8px 24px;
+    border-radius: 8px;
+   
+    margin: auto;
+   position: absolute;
+}
+.logo-img{
+    width: 40px;
+    fill: #162b48;
+    margin-right: auto;
+    transition: transform .7s ease-in-out;
+}
+.logo-img:hover {
+  transform: rotate(360deg);
+  fill: rgb(255, 153, 0);
+}
+
+
+.playerBtns{
+    display : flex;
+    justify-content: center;
+    padding: 40px;
+    background-color: #f0f1f3;
+}
+.rps-button{
+    display: flex;
+    flex-direction: column-reverse;
+    border: solid 2px #162b48;
+    border-bottom: solid 8px #162b48;
+    border-radius: 10px;
+    text-transform: uppercase;
+    color: #162b48;
+    background-color: #ffcf4a;
+    padding: 8px 24px;
+    margin: 8px;
+    gap: 8px;
+}
+.rps-icon{
+    height: 120px;
+    align-self: center;
+    fill: #162b48;
+}
+
+.rps-button:hover{
+   
+    background-color: rgb(253, 168, 45);
+    color: white;
+    
+}
+.rps-icon:hover{
+       
+        fill: white;
+    } 
+.game-board {
+
+    color: #162b48;
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+   
+}
+
+.view {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  min-width: 300px;
+  width: 600px;
+  padding: 16px;
+   background-color: #f0f1f3;
+  border: #fb6f6f solid 2px;
+  border-bottom: #fb6f6f solid 8px;
+  border-radius: 10px;
+  text-align: center;
+}
+.computerView .rps-icon{
+    fill: #c54d4d;
+}
+
+/* keep top text at the top */
+.selection-text {
+  margin-bottom: auto;
+}
+
+/* center the result div vertically in the middle space */
+.player-result,
+.computer-result {
+  display: flex;
+  justify-content: center;  /* center horizontally */
+  align-items: center;      /* center vertically */
+  flex-grow: 1;             /* take up available space */
+}
+
+/* keep score counter (numCount) at bottom */
+.numCount {
+  margin-top: auto;
+}
+
+
+.txt{
+    align-self: start;
+    margin-top: -80px;
+}
+.ss-svg{
+   
+   
+    align-self: flex-end;
+    fill: #162b48;
+    height: 200px;
+    border: red 2px solid;
+}
+.ss-svg:hover{
+    fill: white;
+    transition: 0.7s
+}
+
+.roundResult {
+    display: hidden;
+    text-align: center;
+
+    margin-top: 20px;
+
+    
+    
+}
+
+.hidden {
+    display: none;
+}

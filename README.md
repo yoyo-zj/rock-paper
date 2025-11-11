@@ -1,13 +1,9 @@
-# rock-paper
+Step 1: Create connection between user input via button and code
 
-This is a projec tto learn how use function in depth. 
+step 2: take that input use it to rock paper scissors program
 
-First section generates random computer choice 
+step 3: create point system
 
-second part get user choice 
+step 4: then use point system create a round sytem that goes first to five
 
-third meant to keep score
-
-fourth part mean to play a single round
-
-6th part meant to play entire round
+step 5: create pop up that allows user to play another round or 

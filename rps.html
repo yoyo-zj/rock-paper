@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rps-UI</title>
+    <script src="rps.js" defer></script>
+    <link rel="stylesheet" href="rps.css">
+</head>
+<body>
+   
+   <!-- Header -->
+    <div class="header">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class = "logo-img"><path d="M192 64C86 64 0 150 0 256S86 448 192 448l256 0c106 0 192-86 192-192s-86-192-192-192L192 64zM496 168a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM392 304a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM168 200c0-13.3 10.7-24 24-24s24 10.7 24 24l0 32 32 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-32 0 0 32c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-32-32 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l32 0 0-32z"/></svg>
+        <h1 class="logo double-border">Rock Paper Scissors</h1>
+    </div>
+
+    <div class="start-page">
+        <button class="start-button">Start</button>
+    </div>
+
+    <!-- This part show what the computer and player selected-->
+ <div class="game">
+     <div class = "roundResult">
+       
+        </div>  
+    <div class="game-board">
+        
+        <div class="player-selection view hidden">
+           <div class="selection-text"> Player Selected</div>
+            <div class="player-result">
+                
+               
+            </div>
+             <div class="playerCounter numCount hidden"></div>
+        </div>
+        <div class="vs"></div> 
+        
+        <div class="computer-selection view hidden">
+            <div class="selection-text hidden"> Computer Selected</div>
+             <div class="computer-result hidden">
+
+               </div><div class="computerCounter numCount hidden"></div>
+             </div>  
+         </div>
+      
+    </div>
+ 
+
+    <div class = "playerBtns hidden">
+        <button class = "rps-button hidden" id="rockBtn">
+            Rock
+            <svg  class="rps-icon hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M144 0C117.5 0 96 21.5 96 48l0 48 0 28.5L96 176c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-26.7-9 7.5C40.4 169 32 187 32 206L32 244c0 38 16.9 74 46.1 98.3L128 384l0 96c0 17.7 14.3 32 32 32l160 0c17.7 0 32-14.3 32-32l0-105.3c46.9-19 80-65 80-118.7l0-80 0-16 0-16c0-26.5-21.5-48-48-48c-12.4 0-23.6 4.7-32.1 12.3C350 83.5 329.3 64 304 64c-12.4 0-23.6 4.7-32.1 12.3C270 51.5 249.3 32 224 32c-12.4 0-23.6 4.7-32.1 12.3C190 19.5 169.3 0 144 0z"/></svg>
+        </button>
+
+        <button class = "rps-button hidden" id="paperBtn">
+            Paper
+            <svg class="rps-icon hidden"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 208c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-176c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 272c0 1.5 0 3.1 .1 4.6L67.6 283c-16-15.2-41.3-14.6-56.6 1.4s-14.6 41.3 1.4 56.6L124.8 448c43.1 41.1 100.4 64 160 64l19.2 0c97.2 0 176-78.8 176-176l0-208c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-176c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 176c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-208z"/></svg>
+        </button>
+
+        <button class="rps-button hidden" id="scissorBtn">
+            Scissors
+            <svg class="rps-icon hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M40 208c-22.1 0-40 17.9-40 40s17.9 40 40 40l180.2 0c-7.6 8.5-12.2 19.7-12.2 32c0 25.3 19.5 46 44.3 47.9c-7.7 8.5-12.3 19.8-12.3 32.1c0 26.5 21.5 48 48 48l32 0 64 0c70.7 0 128-57.3 128-128l0-113.1c0-40.2-16-78.8-44.4-107.3C444.8 76.8 413.9 64 381.7 64L336 64c-21.3 0-39.3 13.9-45.6 33.1l74.5 23.7c8.4 2.7 13.1 11.7 10.4 20.1s-11.7 13.1-20.1 10.4L288 129.9c0 0 0 .1 0 .1L84 65.8C62.9 59.2 40.5 70.9 33.8 92s5.1 43.5 26.2 50.2L269.5 208 40 208z"/></svg>
+        </button>
+    </div>
+       
+</div>
+</body>
+</html>
